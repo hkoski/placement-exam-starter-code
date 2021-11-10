@@ -1,7 +1,4 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
 
-// First, tell us your name
 let yourName = "Heather Koski" // HINT: Replace this with your own name!
 
 // We'll use these variables to track the counts of each cookie type
