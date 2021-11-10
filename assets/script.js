@@ -13,18 +13,40 @@ let sugar = 0   // Sugar Sprinkle
 document.getElementById('credit').textContent = `Created by ${yourName}`
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
-document.getElementById('add-gb').addEventListener('click', function() {
-    // HINT: You can delete this console.log after you no longer need it!
-    console.log('Gingerbread + button was clicked!')
-
-    // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+document.getElementById('add-gb').addEventListener('click', function () {
+    gb = gb+1;
+    document.getElementById('qty-gb').textContent=gb;
+    document.getElementById('qty-total').textContent=gb + cc + sugar;
+})
+document.getElementById('minus-gb').addEventListener('click', function () {
+    if (gb > 0) {
+    gb = gb-1;
+    document.getElementById('qty-gb').textContent=gb;
+    document.getElementById('qty-total').textContent=gb + cc + sugar;}
 })
 
-// TODO: Hook up event listeners for the rest of the buttons
+
 document.getElementById('add-cc').addEventListener('click', function () {
-    console.log('Chocolate Chip + button was clicked!')
+    cc = cc+1;
+    document.getElementById('qty-cc').textContent=cc;
+    document.getElementById('qty-total').textContent=gb + cc + sugar;
 })
+document.getElementById('minus-cc').addEventListener('click', function () {
+    if (cc > 0) {
+    cc = cc-1;
+    document.getElementById('qty-cc').textContent=cc;
+    document.getElementById('qty-total').textContent=gb + cc + sugar;}
+})
+
 
 document.getElementById('add-sugar').addEventListener('click', function () {
-    console.log('Sugar Sprinkle + button was clicked!')
+    sugar = sugar+1;
+    document.getElementById('qty-sugar').textContent=sugar;
+    document.getElementById('qty-total').textContent=gb + cc + sugar;
+})
+document.getElementById('minus-sugar').addEventListener('click', function () {
+    if (sugar > 0) {
+    sugar = sugar-1;
+    document.getElementById('qty-sugar').textContent=sugar;
+    document.getElementById('qty-total').textContent=gb + cc + sugar;}
 })
